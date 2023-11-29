@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import NavBar from "./Components/NavBar";
 
-function App() {
+import React from "react";
+import RestaurantsList from "./Components/RestaurantsList"; // adjust the path based on your project structure
+import restaurants from "./assets/restaurant";
+
+const App = () => {
+  // Your restaurants data
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavBar />
+      <RestaurantsList restaurants={restaurants} />
     </div>
   );
-}
+};
 
 export default App;
